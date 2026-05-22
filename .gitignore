@@ -1,0 +1,67 @@
+# =====================================================================
+#  LaTeX build artifacts
+# =====================================================================
+
+# Core LaTeX intermediates
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+
+# Bibliography
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+
+# Index / glossary
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+
+# Misc TeX tooling
+*.aux.bak
+*.brf
+*.dvi
+*.ps
+*.xdv
+*.figlist
+*.makefile
+*.dpth
+*.auxlock
+
+# latexmk
+*.pre
+
+# TikZ externalize cache
+*-tikzDictionary
+
+# Editor / OS junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# =====================================================================
+#  Optional: ignore the generated PDF
+#  (uncomment the next line if you do NOT want to commit report.pdf)
+# =====================================================================
+# report.pdf
