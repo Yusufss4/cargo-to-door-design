@@ -1,4 +1,4 @@
-# Presentation Structure
+# Report Structure
 
 * **Motivation & Problem definition**
 * **Literature Survey**
