@@ -48,10 +48,6 @@
 \setlist{itemsep=2pt,topsep=2pt}
 \usepackage{xcolor}
 
-% ---- TikZ for architecture diagram + Gantt chart ---------------------
-\usepackage{tikz}
-\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds, calc}
-
 % ---- Hyperlinks (load last) ------------------------------------------
 \usepackage[colorlinks=true,
             linkcolor=black,
@@ -530,25 +526,7 @@ the principal data flows between them.
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[
-    node distance=0.9cm and 1.2cm,
-    layer/.style={rectangle, rounded corners, draw, thick,
-                  text width=3.6cm, align=center, minimum height=1.4cm,
-                  fill=blue!5},
-    edge/.style={-{Latex[length=2.5mm]}, thick}
-]
-\node[layer] (cloud) {\textbf{Central Logistics Cloud}\\(The ``Brain'')\\Fleet API Gateway, BAS Controller, Security \& Auth};
-\node[layer, below=of cloud] (edge) {\textbf{External Intake Nodes}\\(The ``Edge'')\\Aerial rooftop node, Ground micro-vehicle node};
-\node[layer, below=of edge] (spine) {\textbf{Vertical Transport Core}\\(The ``Spine'')\\New-build conveyors \& diverters; Retrofit tube \& claws};
-\node[layer, below=of spine] (last)  {\textbf{Delivery Endpoints}\\(The ``Last Meter'')\\Hallway smart lockers; Retrofitted window-box lockers};
-\node[layer, below=of last]  (app)   {\textbf{End-User Interface}\\(The App)\\Resident notifications and authentication};
-
-\draw[edge] (cloud) -- (edge);
-\draw[edge] (edge) -- (spine);
-\draw[edge] (spine) -- (last);
-\draw[edge] (last) -- (app);
-\draw[edge, dashed] (app.east) to[bend left=60] (cloud.east);
-\end{tikzpicture}
+\includegraphics[width=\linewidth]{high-level-system-architecture.png}
 \caption{Cargo-to-Door five-layer system architecture, from Central Cloud down to the resident's app.}
 \label{fig:arch}
 \end{figure}
